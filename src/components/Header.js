@@ -1,5 +1,6 @@
 import reactLogo from "../../Images/foodWebsiteLogo.png";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Header = () =>{
 
@@ -12,9 +13,15 @@ const Header = () =>{
             </div>
             <div className="nav-items">
                 <ul>
-                    <li>Home</li>
-                    <li>About Us</li>
-                    <li>Contact Us</li>
+                    <li>
+                        <Link to="/">Home</Link>
+                    </li>
+                    <li>
+                        <Link to="/About">About Us</Link>
+                    </li>
+                    <li>
+                        <Link to="/Contact">Contact Us</Link>
+                    </li>
                     <li>Cart</li>
                     <button onClick={()=>
                     (btnName=="Login")? setbtnName("Logout")
